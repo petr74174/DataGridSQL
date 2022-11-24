@@ -9,8 +9,26 @@
    <Grid>
         <DataGrid
         x:Name = "userNameElem"
+        AutoGenerateColumns="False"
+        IsReadOnly="True"    
         >
-            <DataGrid.Columns
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                    Header="ID" Width="*" Binding="{Binding UserID}"
+                />
+                <DataGridTextColumn
+                    Header="Фамилия" Width="*" Binding="{Binding UserSurname}"
+                />
+                <DataGridTextColumn
+                    Header="Имя" Width="*" Binding="{Binding UserName}"
+                />
+                <DataGridTextColumn
+                    Header="Отчество" Width="*" Binding="{Binding UserPatronymic}"
+                />
+                <DataGridTextColumn
+                    Header="Роль" Width="*" Binding="{Binding Role.RoleName}"
+                />
+            </DataGrid.Columns>
               
         </DataGrid>
    </Grid>

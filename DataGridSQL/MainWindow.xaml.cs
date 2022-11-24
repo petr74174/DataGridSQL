@@ -20,9 +20,11 @@ namespace DataGridSQL
     /// </summary>
     public partial class MainWindow : Window
     {
+        public Connection connection = new Connection();
         public MainWindow()
         {
             InitializeComponent();
+            userNameElem.ItemsSource = connection.User.ToList();
         }
     }
 }
